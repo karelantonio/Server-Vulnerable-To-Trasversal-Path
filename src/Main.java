@@ -25,5 +25,8 @@ public class Main
 		//Lo iniciamos
 		server.start();
 		System.out.println("Inicio exitoso!");
+		
+		System.out.println("El servidor se apagará automaticamente en 240 segundos (4 minutos)");
+		Thread.sleep(240*1000);
 	}
 }
