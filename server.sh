@@ -6,7 +6,7 @@ fi
 
 if [ -f server.zip.b64 ];then
 	echo "Desempaquetando el servidor, espere un momento..."
-	cat server.zip.b64 | base64 -d > server.zip || exit 1
+	cat server.zip.b64 | base64 -d > server.zip || { echo "El archivo descargado no es correcto, por favor vuelva a descargar" ; exit 1 ; }
 fi
 
 if [ ! -f server.zip ];then
